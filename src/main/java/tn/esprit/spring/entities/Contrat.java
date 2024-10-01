@@ -28,7 +28,10 @@ public class Contrat implements Serializable {
 	
 	@Temporal(TemporalType.DATE)
 	private Date dateDebut;
-	 
+
+	@Temporal(TemporalType.DATE)
+
+	private  Date dateFin;
 	private String typeContrat;
  
 	@JsonIgnore
@@ -41,10 +44,11 @@ public class Contrat implements Serializable {
 		super();
 	}
 	
-	public Contrat(Date dateDebut, String typeContrat, float salaire) {
+	public Contrat(Date dateDebut, String typeContrat, float salaire, Date dateFin) {
 		this.dateDebut = dateDebut;
 		this.typeContrat = typeContrat;
 		this.salaire = salaire;
+		this.dateFin =dateFin;
 	}
 
 
